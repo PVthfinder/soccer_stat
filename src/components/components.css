@@ -74,3 +74,9 @@
         margin: 1rem 1rem;
     }
   }
+
+  @media (max-width: 680px) {
+    .date-filter {
+        flex-direction: column;
+    }
+  }

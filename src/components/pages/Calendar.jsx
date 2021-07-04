@@ -9,7 +9,7 @@ import {Back, MatchesList} from '../index';
 
 function Calendar() {
     const {
-        filteredMatches, 
+        matches,
         setMatches, 
         setYear, 
         setSearchValue, 
@@ -48,9 +48,9 @@ function Calendar() {
     return (
         <>
             <Back/>
-            {filteredMatches ? 
+            {matches ? 
             <MatchesList/>:
-            <h4>Sorry, nothing found...</h4>}
+            <h4>Sorry, information is not available...</h4>}
         </>
     )
 }

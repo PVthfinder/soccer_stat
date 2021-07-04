@@ -38,7 +38,7 @@ function TeamsList() {
     return (
         <>
             <Back/>
-            {teams.length ?
+            {teams ?
                 (filteredTeams.length ?
                 <>
                     <Search/>
@@ -51,8 +51,8 @@ function TeamsList() {
                         ))}
                     </div> 
                 </>:
-                <h4>Sorry, information is not available...</h4>) :
-            <Preloader/>}
+                <h4>Sorry, nothing found...</h4>) :
+            <h4>Sorry, information is not available...</h4>}
         </>
     )
 }
