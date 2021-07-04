@@ -10,6 +10,7 @@ import {Preloader, Search} from '../index';
 
 function CompetitionsList() {
     const {
+        competitions,
         filteredCompetitions, 
         setCompetitions, 
         getUrlSearchValue
@@ -23,14 +24,16 @@ function CompetitionsList() {
     }, [search]);
 
     return (
-        filteredCompetitions.length ?
+        competitions.length ?
         <>
             <Search/>
+            {filteredCompetitions.length ?
             <div className="list">
                 {filteredCompetitions.map(item => (
                     <CompetitionItem key={item.id} {...item}/>
                 ))}
-            </div>
+            </div> :
+            <h4>Sorry, nothing found...</h4>}
         </> :
         <Preloader/>
     )

@@ -10,6 +10,7 @@ import {Preloader, Back, Search, YearSelector} from '../index';
 
 function TeamsList() {
     const {
+        teams,
         filteredTeams, 
         setTeams, 
         setYear, 
@@ -37,7 +38,7 @@ function TeamsList() {
     return (
         <>
             <Back/>
-            {filteredTeams ?
+            {teams.length ?
                 (filteredTeams.length ?
                 <>
                     <Search/>
@@ -50,8 +51,8 @@ function TeamsList() {
                         ))}
                     </div> 
                 </>:
-                <Preloader/>) :
-            <h4>Sorry, information is not available...</h4>}
+                <h4>Sorry, information is not available...</h4>) :
+            <Preloader/>}
         </>
     )
 }

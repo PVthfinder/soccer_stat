@@ -15,7 +15,7 @@ function MatchesList() {
         <>
         <Search/>
             {filteredMatches ?
-                filteredMatches.length ?
+                (filteredMatches.length ?
                 <>
                     {pathname.includes('competition') ?
                     <YearSelector/> :
@@ -27,7 +27,7 @@ function MatchesList() {
                         ))}
                     </div>
                 </> :
-                <h4>Sorry, nothing found...</h4> :
+                <h4>Sorry, nothing found...</h4>) :
             <Preloader/>}
         </>
     )
